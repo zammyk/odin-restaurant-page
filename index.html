@@ -5,9 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurant Page</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="content"></div>
+    <header class="flex">
+      <div class="home">Home</div>
+      <div class="menu">Menu</div>
+      <div class="contact">Contact</div>
+    </header>
+    <div id="content">
+      <div class="container flex-col">
+        <div class="heading">Cantinae's Pizzeria</div>
+        <div class="about">
+          We serve pizza's like you've never had before.<br />
+          Eat it like you mean it!
+        </div>
+        <div class="image-container">
+          <img src="./../assets/chef.jpg" alt="Chef Image" />
+        </div>
+        <div class="link">
+          <a href="https://bit.ly/3dV6cFr">Order Now!</a>
+        </div>
+      </div>
+    </div>
+    <footer class="flex">Copyright © 2023 Rahul Hembrom</footer>
     <script src="main.js"></script>
   </body>
 </html>

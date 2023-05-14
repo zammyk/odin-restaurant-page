@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "HeadingFont";
+  src: url("./../assets/Suithame.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MainFont";
+  src: url("./../assets/LABTSEC_.ttf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "MainFont";
+  font-size: 1.5rem;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url("./../assets/background.jpg");
+  background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header,
+footer {
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+header {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+}
+
+#content {
+  padding-top: 10vh;
+}
+
+footer {
+  height: 5vh;
+  font-size: 0.75rem;
+}
+
+.container {
+  margin: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  gap: 2rem;
+}
+
+.container > * {
+  text-align: center;
+}
+
+.image-container img {
+  height: 15rem;
+  width: 15rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.heading {
+  font-family: "HeadingFont";
+  font-size: 3rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}

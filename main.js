@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log(\"N-word Singha!\");\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?");
+eval("const contentContainer = document.getElementById(\"content\").children[0];\nconsole.log(contentContainer);\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?");
 
 /***/ })
 
