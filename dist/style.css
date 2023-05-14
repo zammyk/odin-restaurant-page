@@ -45,6 +45,7 @@ header {
 
 #content {
   padding-top: 10vh;
+  justify-content: center;
 }
 
 footer {
@@ -56,6 +57,7 @@ footer {
   margin: 2rem;
   padding: 1.5rem;
   background-color: rgba(0, 0, 0, 0.5);
+  width: 60vw;
   align-items: center;
   gap: 2rem;
 }
