@@ -1,0 +1,23 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "A restaurant page, made as a project under The Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zammyk/odin-restaurant-page"
+  },
+  "author": "zammyk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zammyk/odin-restaurant-page/issues"
+  },
+  "homepage": "https://github.com/zammyk/odin-restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  }
+}
