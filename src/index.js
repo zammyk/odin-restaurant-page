@@ -1,1 +1,2 @@
-console.log("N-word Singha!");
+const contentContainer = document.getElementById("content").children[0];
+console.log(contentContainer);
