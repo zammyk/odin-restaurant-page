@@ -133,7 +133,7 @@ footer {
   position: relative;
 }
 
-.images > *:first-child {
+.images > * {
   padding-top: 0.8rem;
 }
 
