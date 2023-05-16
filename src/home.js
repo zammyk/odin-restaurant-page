@@ -24,6 +24,7 @@ linkDiv.classList.add("link");
 linkDiv.appendChild(link);
 
 export function loadHome(node) {
+  node.classList.add("flex-col");
   node.appendChild(heading);
   node.appendChild(about);
   node.appendChild(imgContainer);
