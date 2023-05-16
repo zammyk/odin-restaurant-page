@@ -11,5 +11,15 @@ const menu = document.getElementById("menu");
 const contact = document.getElementById("contact");
 console.log(contentContainer);
 
-deleteAllChildren(contentContainer);
-loadMenu(contentContainer);
+loadHome(contentContainer);
+home.addEventListener("click", (event) => {
+  deleteAllChildren(contentContainer);
+  loadHome(contentContainer);
+});
+menu.addEventListener("click", (event) => {
+  deleteAllChildren(contentContainer);
+  loadMenu(contentContainer);
+});
+contact.addEventListener("click", (event) => {
+  deleteAllChildren(contentContainer);
+});

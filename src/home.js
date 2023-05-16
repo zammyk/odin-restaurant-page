@@ -24,7 +24,10 @@ linkDiv.classList.add("link");
 linkDiv.appendChild(link);
 
 export function loadHome(node) {
-  node.classList.add("flex-col");
+  node.removeAttribute("class");
+  ["container", "flex-col"].forEach(function (className) {
+    node.classList.add(className);
+  });
   node.appendChild(heading);
   node.appendChild(about);
   node.appendChild(imgContainer);
