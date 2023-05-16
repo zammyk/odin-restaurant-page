@@ -1,4 +1,4 @@
-import { elementFactory } from "./helper";
+import { elementFactory, createImage } from "./helper";
 
 function createCard(name, price, description) {
   const nameEle = elementFactory("div", ["item-name"], name, []);
@@ -27,6 +27,16 @@ function createFieldSet(legendName) {
   return fieldset;
 }
 
+function createImageContainer(src, alt, name) {
+  const img = createImage(src, alt);
+  const title = elementFactory("div", ["name"], name, []);
+  const imgContainer = elementFactory("div", ["image-container"], "", [
+    img,
+    title,
+  ]);
+  return imgContainer;
+}
+
 export function loadMenu(node) {
   node.removeAttribute("class");
   ["container", "grid", "remove-top-padding", "no-gap"].forEach(function (
@@ -39,5 +49,12 @@ export function loadMenu(node) {
     createFieldSet("Pizza"),
     createFieldSet("Pizza"),
   ]);
+  const images = elementFactory("div", ["images", "flex-col"], "", [
+    createImageContainer("./../assets/pizza-pepperoni.jpg", "ALT", "some name"),
+    createImageContainer("./../assets/pizza-pepperoni.jpg", "ALT", "some name"),
+    createImageContainer("./../assets/pizza-pepperoni.jpg", "ALT", "some name"),
+    createImageContainer("./../assets/pizza-pepperoni.jpg", "ALT", "some name"),
+  ]);
   node.appendChild(items);
+  node.appendChild(images);
 }
