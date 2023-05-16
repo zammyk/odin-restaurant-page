@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/helper.js":
+/*!***********************!*\
+  !*** ./src/helper.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"elementFactory\": () => (/* binding */ elementFactory)\n/* harmony export */ });\nfunction elementFactory(type, classes, text, children) {\n  const ele = document.createElement(type);\n\n  if (classes.length > 0) {\n    classes.forEach((cls) => {\n      ele.classList.add(cls);\n    });\n  }\n\n  if (text != \"\") ele.textContent = text;\n\n  if (children.length > 0) {\n    children.forEach((child) => {\n      ele.appendChild(child);\n    });\n  }\n\n  return ele;\n}\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/helper.js?");
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
@@ -26,7 +36,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n\n\nfunction deleteAllChildren(node) {\n  while (node.firstChild != null) node.removeChild(node.firstChild);\n}\n\nconst contentContainer = document.getElementById(\"content\").children[0];\nconst home = document.getElementById(\"home\");\nconst menu = document.getElementById(\"menu\");\nconst contact = document.getElementById(\"contact\");\nconsole.log(contentContainer);\n\nsetTimeout(() => {\n  deleteAllChildren(contentContainer);\n  contentContainer.classList.remove(\"grid\");\n  contentContainer.classList.add(\"flex-col\");\n  (0,_home__WEBPACK_IMPORTED_MODULE_0__.loadHome)(contentContainer);\n}, 5000);\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\nfunction deleteAllChildren(node) {\n  while (node.firstChild != null) node.removeChild(node.firstChild);\n}\n\nconst contentContainer = document.getElementById(\"content\").children[0];\nconst home = document.getElementById(\"home\");\nconst menu = document.getElementById(\"menu\");\nconst contact = document.getElementById(\"contact\");\nconsole.log(contentContainer);\n\ndeleteAllChildren(contentContainer);\n(0,_menu__WEBPACK_IMPORTED_MODULE_1__.loadMenu)(contentContainer);\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadMenu\": () => (/* binding */ loadMenu)\n/* harmony export */ });\n/* harmony import */ var _helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helper */ \"./src/helper.js\");\n\n\nfunction createCard(name, price, description) {\n  const nameEle = (0,_helper__WEBPACK_IMPORTED_MODULE_0__.elementFactory)(\"div\", [\"item-name\"], name, []);\n  const priceEle = (0,_helper__WEBPACK_IMPORTED_MODULE_0__.elementFactory)(\"div\", [\"item-price\"], price, []);\n  const descriptionEle = (0,_helper__WEBPACK_IMPORTED_MODULE_0__.elementFactory)(\n    \"div\",\n    [\"item-description\"],\n    description,\n    []\n  );\n\n  const card = (0,_helper__WEBPACK_IMPORTED_MODULE_0__.elementFactory)(\"div\", [\"card\"], \"\", [\n    nameEle,\n    priceEle,\n    descriptionEle,\n  ]);\n  return card;\n}\n\nfunction createFieldSet(legendName) {\n  const legend = (0,_helper__WEBPACK_IMPORTED_MODULE_0__.elementFactory)(\"legend\", [], legendName, []);\n  const fieldset = (0,_helper__WEBPACK_IMPORTED_MODULE_0__.elementFactory)(\"fieldset\", [\"flex-col\"], \"\", [\n    legend,\n    createCard(\"pep\", 69, \"oausfeugoa\"),\n  ]);\n  return fieldset;\n}\n\nfunction loadMenu(node) {\n  node.removeAttribute(\"class\");\n  [\"container\", \"grid\", \"remove-top-padding\", \"no-gap\"].forEach(function (\n    className\n  ) {\n    node.classList.add(className);\n  });\n  const items = (0,_helper__WEBPACK_IMPORTED_MODULE_0__.elementFactory)(\"div\", [\"items\", \"flex-col\"], \"\", [\n    createFieldSet(\"Pizza\"),\n    createFieldSet(\"Pizza\"),\n    createFieldSet(\"Pizza\"),\n  ]);\n  node.appendChild(items);\n}\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/menu.js?");
 
 /***/ })
 
