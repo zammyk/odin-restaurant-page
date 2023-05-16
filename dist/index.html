@@ -9,15 +9,127 @@
     <link rel="stylesheet" href="btnStyle.css" />
   </head>
   <body>
-    <header class="flex">
-      <div class="home btn-anim">Home</div>
-      <div class="menu btn-anim">Menu</div>
-      <div class="contact btn-anim">Contact</div>
-    </header>
-    <div id="content" class="flex">
-      <div class="container flex-col"></div>
+    <div id="main">
+      <header class="flex">
+        <div class="home btn-anim" id="home">Home</div>
+        <div class="menu btn-anim" id="menu">Menu</div>
+        <div class="contact btn-anim" id="contact">Contact</div>
+      </header>
+      <div id="content" class="flex">
+        <div class="container grid remove-top-padding no-gap">
+          <div class="items flex-col">
+            <fieldset class="flex-col">
+              <legend>Pizzas</legend>
+              <div class="card">
+                <div class="item-name">Pepperoni</div>
+                <div class="item-price">69$</div>
+                <div class="item-description">
+                  Tomato sauce, mozarella, pork pepperoni, parmesan
+                </div>
+              </div>
+              <div class="card">
+                <div class="item-name">Margherita</div>
+                <div class="item-price">69$</div>
+                <div class="item-description">
+                  Tomato sauce, mozarella, cheddar, parmesan, basil
+                </div>
+              </div>
+              <div class="card">
+                <div class="item-name">Pesto Besto</div>
+                <div class="item-price">69$</div>
+                <div class="item-description">
+                  Basil pesto, mozarella, cherry tomatoes, courgette, mushrooms,
+                  caramelized onions, parmesan, fresh basil
+                </div>
+              </div>
+              <div class="card">
+                <div class="item-name">Chicken Chilli Freak</div>
+                <div class="item-price">69$</div>
+                <div class="item-description">
+                  Chilli freak sauce, mozarella, cheddar, pulled chicken,
+                  chillies, jalapeño, minty yoghurt, lime
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Salads</legend>
+              <div class="card">
+                <div class="item-name">Brocolli Caesar</div>
+                <div class="item-price">69$</div>
+                <div class="item-description">
+                  Romaine lettuce, brocolli, croutons, red onions toasted
+                  hazelnuts, parmesan, caesar dressing
+                </div>
+              </div>
+              <div class="card">
+                <div class="item-name">Caprese</div>
+                <div class="item-price">69$</div>
+                <div class="item-description">
+                  Mixed tomatoes, baby mozarella, basil
+                </div>
+              </div>
+              <div class="card">
+                <div class="item-name">Jamie's Waldorf</div>
+                <div class="item-price">69$</div>
+                <div class="item-description">
+                  Romaine and radicchio lettuce, rocket grapes, apples,celery,
+                  walnuts, feta dressing
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Sides</legend>
+              <div class="card">
+                <div class="item-name">Garlic Bread</div>
+                <div class="item-price">69$</div>
+                <div class="item-description">
+                  Sundried tomatoes & olive tapenade
+                </div>
+              </div>
+              <div class="card">
+                <div class="item-name">Tomato Bruschetta</div>
+                <div class="item-price">69$</div>
+                <div class="item-description">
+                  Slow roasted cherry tomatoes, whipped ricotta, basil, garlic
+                </div>
+              </div>
+              <div class="card">
+                <div class="item-name">Pizza Puffs</div>
+                <div class="item-price">69$</div>
+                <div class="item-description">
+                  Fried pizza dough with Tomato dipping sauce
+                </div>
+              </div>
+            </fieldset>
+            <div class="section"></div>
+            <div class="section"></div>
+          </div>
+          <div class="images flex-col">
+            <div class="image-container">
+              <img src="./../assets/pizza-pepperoni.jpg" alt="Pepperoni" />
+              <div class="name">Some title</div>
+            </div>
+            <div class="image-container">
+              <img src="./../assets/pizza-pepperoni.jpg" alt="Pepperoni" />
+              <div class="name">Some title</div>
+            </div>
+            <div class="image-container">
+              <img src="./../assets/pizza-pepperoni.jpg" alt="Pepperoni" />
+              <div class="name">Some title</div>
+            </div>
+            <div class="image-container">
+              <img src="./../assets/pizza-pepperoni.jpg" alt="Pepperoni" />
+              <div class="name">Some title</div>
+            </div>
+            <div class="image-container">
+              <img src="./../assets/pizza-pepperoni.jpg" alt="Pepperoni" />
+              <div class="name">Some title</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="flex">Copyright © 2023 Rahul Hembrom</footer>
     </div>
-    <footer class="flex">Copyright © 2023 Rahul Hembrom</footer>
     <script src="main.js"></script>
   </body>
 </html>

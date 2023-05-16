@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n\n\nconst contentContainer = document.getElementById(\"content\").children[0];\nconsole.log(contentContainer);\n\n(0,_home__WEBPACK_IMPORTED_MODULE_0__.loadHome)(contentContainer);\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n\n\nfunction deleteAllChildren(node) {\n  while (node.firstChild != null) node.removeChild(node.firstChild);\n}\n\nconst contentContainer = document.getElementById(\"content\").children[0];\nconst home = document.getElementById(\"home\");\nconst menu = document.getElementById(\"menu\");\nconst contact = document.getElementById(\"contact\");\nconsole.log(contentContainer);\n\nsetTimeout(() => {\n  deleteAllChildren(contentContainer);\n  contentContainer.classList.remove(\"grid\");\n  contentContainer.classList.add(\"flex-col\");\n  (0,_home__WEBPACK_IMPORTED_MODULE_0__.loadHome)(contentContainer);\n}, 5000);\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?");
 
 /***/ })
 
