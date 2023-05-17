@@ -18,12 +18,10 @@ function createCard(name, price, description) {
   return card;
 }
 
-function createFieldSet(legendName) {
+function createFieldSet(legendName, children) {
   const legend = elementFactory("legend", [], legendName, []);
-  const fieldset = elementFactory("fieldset", ["flex-col"], "", [
-    legend,
-    createCard("pep", 69, "oausfeugoa"),
-  ]);
+  children.push(legend);
+  const fieldset = elementFactory("fieldset", ["flex-col"], "", children);
   return fieldset;
 }
 
@@ -45,9 +43,30 @@ export function loadMenu(node) {
     node.classList.add(className);
   });
   const items = elementFactory("div", ["items", "flex-col"], "", [
-    createFieldSet("Pizza"),
-    createFieldSet("Pizza"),
-    createFieldSet("Pizza"),
+    createFieldSet("Pizza", [
+      createCard(
+        "Pepperoni",
+        69,
+        "Tomato sauce, mozarella, pork pepperoni, parmesan"
+      ),
+      createCard(
+        "Margherita",
+        69,
+        "Tomato sauce, mozarella, cheddar, parmesan, basil"
+      ),
+      createCard(
+        "Pesto Besto",
+        69,
+        "Basil pesto, mozarella, cherry tomatoes, courgette, mushrooms, caramelized onions, parmesan, fresh basil"
+      ),
+      createCard(
+        "Chicken Chilli Freak",
+        69,
+        "Chilli freak sauce, mozarella, cheddar, pulled chicken, chillies, jalapeño, minty yoghurt, lime"
+      ),
+    ]),
+    createFieldSet("Pizza", []),
+    createFieldSet("Pizza", []),
   ]);
   const images = elementFactory("div", ["images", "flex-col"], "", [
     createImageContainer("./../assets/pizza-pepperoni.jpg", "ALT", "some name"),
