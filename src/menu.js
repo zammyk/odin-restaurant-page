@@ -65,8 +65,32 @@ export function loadMenu(node) {
         "Chilli freak sauce, mozarella, cheddar, pulled chicken, chillies, jalapeño, minty yoghurt, lime"
       ),
     ]),
-    createFieldSet("Pizza", []),
-    createFieldSet("Pizza", []),
+    createFieldSet("Pizza", [
+      createCard(
+        "Brocolli Caesar",
+        69,
+        "Romaine lettuce, brocolli, croutons, red onions, toasted hazelnuts, parmesan, caesar dressing"
+      ),
+      createCard("Caprese", 69, "Mixed tomatoes, baby mozarella, basil"),
+      createCard(
+        "Jamie's Waldorf",
+        69,
+        "Romaine and radicchio lettuce, rocket grapes, apples, celery, walnuts, feta dressing"
+      ),
+    ]),
+    createFieldSet("Pizza", [
+      createCard("Garlic Bread", 69, "Sundried tomatoes & olive tapenade"),
+      createCard(
+        "Tomato Bruschetta",
+        69,
+        "Slow roasted cherry tomatoes, whipped ricotta, basil, garlic"
+      ),
+      createCard(
+        "Pizza Puffs",
+        69,
+        "Fried pizza dough with Tomato dipping sauce"
+      ),
+    ]),
   ]);
   const images = elementFactory("div", ["images", "flex-col"], "", [
     createImageContainer("./../assets/pizza-pepperoni.jpg", "ALT", "some name"),
