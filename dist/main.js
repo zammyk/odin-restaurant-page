@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadContact\": () => (/* binding */ loadContact)\n/* harmony export */ });\n/* harmony import */ var _helper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helper */ \"./src/helper.js\");\n\n\nfunction loadContact(node) {\n  node.removeAttribute(\"class\");\n  [\"container\", \"flex-col\"].forEach(function (className) {\n    node.classList.add(className);\n  });\n  node.appendChild((0,_helper__WEBPACK_IMPORTED_MODULE_0__.elementFactory)(\"div\", [\"phone\"], \"☎️ +91 123 456 7890\", []));\n  node.appendChild((0,_helper__WEBPACK_IMPORTED_MODULE_0__.elementFactory)(\"div\", [\"address\"], \"🏠 4 Privet Drive\", []));\n  node.appendChild(\n    (0,_helper__WEBPACK_IMPORTED_MODULE_0__.createImage)(\"./../assets/restaurant-location.png\", \"Restaurant Location\")\n  );\n}\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/helper.js":
 /*!***********************!*\
   !*** ./src/helper.js ***!
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\n\n\nfunction deleteAllChildren(node) {\n  while (node.firstChild != null) node.removeChild(node.firstChild);\n}\n\nconst contentContainer = document.getElementById(\"content\").children[0];\nconst home = document.getElementById(\"home\");\nconst menu = document.getElementById(\"menu\");\nconst contact = document.getElementById(\"contact\");\nconsole.log(contentContainer);\n\n// loadHome(contentContainer);\nhome.addEventListener(\"click\", (event) => {\n  deleteAllChildren(contentContainer);\n  (0,_home__WEBPACK_IMPORTED_MODULE_0__.loadHome)(contentContainer);\n});\nmenu.addEventListener(\"click\", (event) => {\n  deleteAllChildren(contentContainer);\n  (0,_menu__WEBPACK_IMPORTED_MODULE_1__.loadMenu)(contentContainer);\n});\ncontact.addEventListener(\"click\", (event) => {\n  deleteAllChildren(contentContainer);\n});\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact */ \"./src/contact.js\");\n\n\n\n\nfunction deleteAllChildren(node) {\n  while (node.firstChild != null) node.removeChild(node.firstChild);\n}\n\nconst contentContainer = document.getElementById(\"content\").children[0];\nconst home = document.getElementById(\"home\");\nconst menu = document.getElementById(\"menu\");\nconst contact = document.getElementById(\"contact\");\nconsole.log(contentContainer);\n\n(0,_home__WEBPACK_IMPORTED_MODULE_0__.loadHome)(contentContainer);\nhome.addEventListener(\"click\", (event) => {\n  deleteAllChildren(contentContainer);\n  (0,_home__WEBPACK_IMPORTED_MODULE_0__.loadHome)(contentContainer);\n});\nmenu.addEventListener(\"click\", (event) => {\n  deleteAllChildren(contentContainer);\n  (0,_menu__WEBPACK_IMPORTED_MODULE_1__.loadMenu)(contentContainer);\n});\ncontact.addEventListener(\"click\", (event) => {\n  deleteAllChildren(contentContainer);\n  (0,_contact__WEBPACK_IMPORTED_MODULE_2__.loadContact)(contentContainer);\n});\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?");
 
 /***/ }),
 

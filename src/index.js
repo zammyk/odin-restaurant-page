@@ -1,5 +1,6 @@
 import { loadHome } from "./home";
 import { loadMenu } from "./menu";
+import { loadContact } from "./contact";
 
 function deleteAllChildren(node) {
   while (node.firstChild != null) node.removeChild(node.firstChild);
@@ -11,7 +12,7 @@ const menu = document.getElementById("menu");
 const contact = document.getElementById("contact");
 console.log(contentContainer);
 
-// loadHome(contentContainer);
+loadHome(contentContainer);
 home.addEventListener("click", (event) => {
   deleteAllChildren(contentContainer);
   loadHome(contentContainer);
@@ -22,4 +23,5 @@ menu.addEventListener("click", (event) => {
 });
 contact.addEventListener("click", (event) => {
   deleteAllChildren(contentContainer);
+  loadContact(contentContainer);
 });
