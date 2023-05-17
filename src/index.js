@@ -10,18 +10,24 @@ const contentContainer = document.getElementById("content").children[0];
 const home = document.getElementById("home");
 const menu = document.getElementById("menu");
 const contact = document.getElementById("contact");
-console.log(contentContainer);
 
+let currPage = home;
 loadHome(contentContainer);
 home.addEventListener("click", (event) => {
+  if (currPage === home) return;
+  currPage = home;
   deleteAllChildren(contentContainer);
   loadHome(contentContainer);
 });
 menu.addEventListener("click", (event) => {
+  if (currPage === menu) return;
+  currPage = menu;
   deleteAllChildren(contentContainer);
   loadMenu(contentContainer);
 });
 contact.addEventListener("click", (event) => {
+  if (currPage === contact) return;
+  currPage = contact;
   deleteAllChildren(contentContainer);
   loadContact(contentContainer);
 });
